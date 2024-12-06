@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  />
+    <title>Shopfy | Home</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    
+    <nav>
+        <div class="header">
+            <a href="home.html" class="logo">Shopfy</a>
+            <button class="nav-btn" id="navBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="cart-icon-container">
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fas fa-cart-arrow-down"></i>
+                </button>
+                <span class="cart-number"></span>
+            </div>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="home.html" class="links active">
+                <i class="fas fa-home"></i>
+            </a></li>
+            <li><a href="login.html" class="links" id="loginBtn">
+                <i class="fas fa-sign-in-alt"></i>
+            </a></li> 
+            <li><a href="logout.html" class="links logout-nav-btn" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i>
+            </a></li> 
+        </ul>
+    </nav>
+
+
+    <section class="banner-container">
+        <div class="banner-card">
+            <h2 class="banner-text">Find Your Perfect <br /> Products from shopfy</h2>
+            <button  class="btn" id="shopBtn">Shop Now</button>
+        </div>
+    </section>
+
+    
+    
+    <div class="mobile-container">
+            <ul class="mobile-links">
+                <li><a href="home.html" class="links active">
+                    <i class="fas fa-home"></i>
+                </a></li>
+                <li><a href="login.html" class="links" id="loginMbBtn">
+                    <i class="fas fa-sign-in-alt"></i>
+                </a></li>
+                <li><a href="logout.html" class="links logout-nav-btn" id="logoutMbBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </a></li> 
+            </ul>
+    </div>
+
+    <div class="cart-sidebar">
+        <aside class="cart">
+            <button class="cart-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <header class="cart-sidebar-header">
+                <h3 class="cart-sidebar-text">Your Products</h3>
+            </header>
+            <div class="cart-items"></div>
+            <footer>
+                <h2 class="cart-total cart-sidebar-text">
+                    total : ₹0.00
+                </h2>
+                <button class="btn">Checkout</button>
+            </footer>
+        </aside>
+    </div>
+
+    <script type="module" src="index.js"></script>
+</body>
+</html>

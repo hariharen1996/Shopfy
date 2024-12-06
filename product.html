@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  />
+    <title>Shopify | Single Product</title>
+    <link rel="stylesheet" href="index.css" />
+    <script>
+      let user = JSON.parse(sessionStorage.getItem('user'))
+
+      if(!user){
+          window.location.href = './login.html'
+      }
+  </script> 
+</head>
+<body>
+    
+    <nav>
+        <div class="header">
+            <a href="home.html" class="logo">Shopfy</a>
+            <button class="nav-btn" id="navBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="cart-icon-container">
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fas fa-cart-arrow-down"></i>
+                </button>
+                <span class="cart-number"></span>
+            </div>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="home.html" class="links active">
+            <i class="fas fa-home"></i>
+          </a></li>
+          <li><a href="logout.html" class="links logout-nav-btn">
+            <i class="fas fa-sign-out-alt"></i>
+          </a></li> 
+          <li class="user">
+            <h1 class="user-name"><span class="name"></span></h1>
+        </li>
+      </ul>
+    </nav>
+    
+    
+    <div class="mobile-container">
+      <ul class="mobile-links">
+          <li><a href="home.html" class="links active">
+            <i class="fas fa-home"></i>
+          </a></li>
+          <li><a href="logout.html" class="links logout-nav-btn">
+            <i class="fas fa-sign-out-alt"></i>
+          </a></li> 
+          <li class="user">
+            <h1 class="user-name"><span class="name" id="mbName"></span></h1>
+        </li>
+      </ul>
+    </div>
+
+    <div class="cart-sidebar">
+        <aside class="cart">
+            <button class="cart-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <header class="cart-sidebar-header">
+                <h3 class="cart-sidebar-text">Your Products</h3>
+            </header>
+            <div class="cart-items"></div>
+            <footer>
+                <h2 class="cart-total cart-sidebar-text">
+                    total: ₹0.00
+                </h2>
+                <button class="btn">Checkout</button>
+            </footer>
+        </aside>
+    </div>
+
+    <section class="single-products">
+        <h1 class="single-products-heading"></h1>
+        <div class="section-center single-products-center">
+        <img
+            class="single-products-img img"
+           
+          />
+          <article class="single-products-info">
+            <div>
+              <h2 class="single-products-title"></h2>
+              <p class="single-products-company text-slanted">
+               
+              </p>
+              <p class="single-products-price"></p>
+              <div class="single-products-colors"></div>
+              <p class="single-products-desc">
+               
+              </p>
+              <button class="addToCartBtn btn" data-id="id">
+                add to cart
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <div class="product-loading">
+        <div class="loader"></div>
+   </div>
+    <script type="module" src="./src/singleproduct/product.js"></script>
+</body>
+</html>

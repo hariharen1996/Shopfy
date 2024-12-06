@@ -1,0 +1,16 @@
+{
+  "name": "shopfy",
+  "version": "1.0.0",
+  "default": "home.html",
+  "scripts": {
+    "start": "parcel home.html",
+    "build": "parcel build home.html product.html products.html --dist-dir ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hariharen",
+  "license": "ISC",
+  "description": "Ecommerce Application",
+  "dependencies": {
+    "parcel": "^2.13.2"
+  }
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  />
+    <title>Shopfy | Products</title>
+    <link rel="stylesheet" href="index.css" />
+    <script>
+        let user = JSON.parse(sessionStorage.getItem('user'))
+
+        if(!user){
+            window.location.href = './login.html'
+        }
+    </script>    
+</head>
+<body>
+    
+    <nav>
+        <div class="header">
+            <a href="home.html" class="logo">Shopfy</a>
+            <button class="nav-btn" id="navBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="cart-icon-container">
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fas fa-cart-arrow-down"></i>
+                </button>
+                <span class="cart-number"></span>
+            </div>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="home.html" class="links active">
+                <i class="fas fa-home"></i>
+            </a></li>
+            <li><a href="logout.html" class="links logout-nav-btn">
+                <i class="fas fa-sign-out-alt"></i>
+            </a></li> 
+            <li class="user">
+                <h1 class="user-name"><span class="name"></span></h1>
+            </li>
+        </ul>
+    </nav>
+    
+    
+    <div class="mobile-container">
+            <ul class="mobile-links">
+                <li><a href="home.html" class="links active">
+                    <i class="fas fa-home"></i>
+                </a></li> 
+                <li><a href="logout.html" class="links logout-nav-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </a></li> 
+                <li class="user">
+                    <h1 class="user-name"><span class="name" id="mbName"></span></h1>
+                </li>
+            </ul>
+    </div>
+
+    <div class="cart-sidebar">
+        <aside class="cart">
+            <button class="cart-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <header class="cart-sidebar-header">
+                <h3 class="cart-sidebar-text">Your Products</h3>
+            </header>
+            <div class="cart-items"></div>
+            <footer>
+                <h2 class="cart-total cart-sidebar-text">
+                    total: ₹0.00
+                </h2>
+                <button class="btn">Checkout</button>
+            </footer>
+        </aside>
+    </div>
+
+    <h1 class="product-title">Products</h1>
+    <div class="products-container">
+        <div class="filters-container">
+            <div class="filters-card">
+                <form class="search-form">
+                    <input type="text" placeholder="search products..." class="search-input" />
+                </form>
+
+                <h2>Company</h2>
+                <article class="company-container">
+                    <button class="company-btn">All</button>
+                    <button class="company-btn">Ikea</button>
+                    <button class="company-btn">Liddy</button>
+                </article>
+
+                <h2>Multiple Company Selection</h2>
+                <article class="check-container">
+                    
+                </article>
+
+                <h2>Single Company Selection</h2>
+                <article class="radio-container">
+                  <div class="form-control">  
+                    <input type="radio" class="company-radio" name="company" value="all" /> 
+                    <label for="all">All</label>
+                  </div>
+                 <div class="form-control">  
+                    <input type="radio" class="company-radio" name="company" value="ikea" /> 
+                    <label for="all">Ikea</label>
+                 </div>
+                </article>
+                
+
+                <h2>Price</h2>
+                <form class="price-form">
+                    <input type="range" class="price-filter" min="0" max="100" value="50" />
+                </form>
+                <p class="price-value">Value</p>
+
+                <div class="clear-filter">
+                    <button class="btn" id="clearBtn">Clear</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-container">
+            
+        </div>
+    </div>
+    
+   <div class="product-loading">
+        <div class="loader"></div>
+   </div>
+
+    <script type="module" src="./src/products/products.js"></script>
+</body>
+</html>
