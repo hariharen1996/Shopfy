@@ -132,7 +132,7 @@ nav .header .logo {
     place-items: center;
     min-height: 100vh;
     background-size: cover;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./shopify-images/product-4.jpeg") center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./shopfy-images/product-4.jpeg") center/cover;
 }
 
 .banner-card {
